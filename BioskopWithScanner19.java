@@ -3,27 +3,39 @@ import java.util.Scanner;
 public class BioskopWithScanner19 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int baris, kolom;
-        String nama, next;
-
         String[][] penonton = new String[4][2];
-        while (true) { 
-            System.out.print("Masukkan nama: ");
-            nama = sc.nextLine();
-            System.out.print("Masukkan baris: ");
-            baris = sc.nextInt();
-            System.out.print("Masukkan kolom: ");
-            kolom = sc.nextInt();
-            sc.nextLine();
-
-            penonton[baris-1][kolom-1] = nama;
-
-            System.out.print("Input penonton lainnya? (y/n): ");
-            next = sc.nextLine();
-
-            if (next.equalsIgnoreCase("n")) {
-                break;
+        
+        while (true) {
+            System.out.println("\n=== MENU BISKOP ===");
+            System.out.println("1. Input data penonton");
+            System.out.println("2. Tampilkan daftar penonton");
+            System.out.println("3. Exit");
+            System.out.print("Pilih menu (1-3): ");
+            
+            int pilihan = sc.nextInt();
+            sc.nextLine(); 
+            
+            switch (pilihan) {
+                case 1:
+                    inputDataPenonton(sc, penonton);
+                    break;
+                case 2:
+                    tampilkanDaftarPenonton(penonton);
+                    break;
+                case 3:
+                    System.out.println("Terima kasih!");
+                    return;
+                default:
+                    System.out.println("Menu tidak valid!");
             }
         }
+    }
+    
+    public static void inputDataPenonton(Scanner sc, String[][] penonton) {
+        
+    }
+    
+    public static void tampilkanDaftarPenonton(String[][] penonton) {
+        
     }
 }

@@ -7,7 +7,7 @@ public class BioskopWithScanner19 {
         
         while (true) {
             System.out.println("\n=== MENU BISKOP ===");
-            System.out.println("1. Input data penonton");
+            System.out.println("1. Input data penonton ");
             System.out.println("2. Tampilkan daftar penonton");
             System.out.println("3. Exit");
             System.out.print("Pilih menu (1-3): ");
